@@ -100,8 +100,10 @@ css.insert('html, body { padding: 0 }')
 css.insert('@media print {...}')
 
 ```
-
-
+*Note*: You have to insert rules one by one! The following will not work in production mode:
+```
+css.insert('html, body { padding: 0 } strong{ padding: 10p }')
+```
 ## `css.fontFace(font)`
 
 loads the given font-face at most once into the document, returns the font family name
